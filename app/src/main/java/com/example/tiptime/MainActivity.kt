@@ -158,3 +158,41 @@ fun TipTimeLayoutPreview() {
         TipTimeLayout()
     }
 }
+
+
+//AQUI EL BOTON DEL DADO
+/*@Composable
+fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
+    var result by remember{mutableStateOf(1)}
+    var imageResource = when (result){
+        1-> R.drawable.dice_1
+        2-> R.drawable.dice_2
+        3-> R.drawable.dice_3
+        4-> R.drawable.dice_4
+        5-> R.drawable.dice_5
+        else -> R.drawable.dice_6
+    }
+    Column(modifier = modifier,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Image(
+            painterResource(imageResource),
+            contentDescription = "1"
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(onClick = {result = (1..6).random() }){
+            Text(text = stringResource(R.string.roll))
+        }
+
+
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun DiceRollerApp() {
+    DiceWithButtonAndImage(modifier = Modifier
+        .fillMaxSize()
+        .wrapContentSize(Alignment.Center))
+}*/
